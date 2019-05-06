@@ -5,7 +5,10 @@
 #include <sstream>
 using namespace std;
 /*
-File System
+File System  - Code below is slightly incomplete more should be coming migrating stuff from Cloud 9 IDE.
+Recreates a file system using a text file as a hard disk.
+
+Uses different symbols to represent a used bit or block 
 */
 
 
@@ -20,8 +23,6 @@ Base Class
 Creates the "Hard Disk using a text file"
 
 */
-
-
 class Sdisk
 {
     
@@ -369,6 +370,7 @@ int Filesys::fssynch(Sdisk& hdisk )
 Sdisk::Sdisk() {} //temp constructor to start filesys just used to get rid of an error
 
 
+//Sdisk  init constructor checks for existing hard disk or makes one
 Sdisk::Sdisk(string disk_name, int numblocks, int block_size)
 {
     blocksize = block_size;
@@ -380,13 +382,13 @@ Sdisk::Sdisk(string disk_name, int numblocks, int block_size)
     ios_base::streampos end_pos = ifs.tellg();
     
     
-    
+    //checks if file is open and whether it has data
     if( ifs.is_open() ) {  
        if(end_pos == numblocks*block_size)
             cout << "Disk Exists " << endl;
             
         
-    }else{
+    }else{ //otherwise creat a new hard disk
         
         diskname = disk_name;
         ofstream ostr;
