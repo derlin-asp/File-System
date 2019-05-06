@@ -4,9 +4,22 @@
 #include <iostream>
 #include <sstream>
 using namespace std;
+/*
+File System
+*/
+
 
 
 vector<string> block(string buffer, int b);
+
+
+
+/*
+Sdisk Class
+Base Class
+Creates the "Hard Disk using a text file"
+
+*/
 
 
 class Sdisk
@@ -15,7 +28,7 @@ class Sdisk
 public :
     Sdisk(string diskname, int numberofblocks, int blocksize); 
     Sdisk();
-    int getblock(int blocknumber, string& buffer);   
+    int getblock(int blocknumber, string& buffer);      //retrns   
     int putblock(int blocknumber, string buffer);
     int getnumberofblocks();                        // accessor function
     int getblocksize();                             // accessor function
