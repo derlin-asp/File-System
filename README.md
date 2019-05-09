@@ -1,4 +1,7 @@
 # File-System
+
+ALLOT of duplicate code in these files - refactoring soon
+
 Basic FAT simulation using c++
 
 Refactoring code from my cloud 9 repos - In progress
