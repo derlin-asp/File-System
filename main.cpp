@@ -1,7 +1,7 @@
 //
 // Created by dave on 5/10/19.
 //
-#include "Sdisk.cpp"
+#include "Sdisk.h"
 #include <iostream>
 using namespace std;
 
@@ -11,9 +11,9 @@ int main()
 {
 
     Sdisk disk1("disk1", 128,128);
-    Filesys fsys(disk1);
+   // Filesys fsys(disk1);
 
-
+/*
 
 
     fsys.newfile("file1", disk1); //file 1
@@ -51,6 +51,8 @@ int main()
     }
 
     fsys.delblock("file2",blocknumber, disk1);
+
+    */
 
 
 }
